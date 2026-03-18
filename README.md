@@ -532,6 +532,10 @@ pipeline {
 
 **Build #1 Result: SUCCESS**
 
+### Jenkins Pipeline - Stage View
+
+![Jenkins Pipeline](screenshots/jenkins-pipeline.png)
+
 ---
 
 ### Step 16: Access the Deployed Application
@@ -564,6 +568,10 @@ Service: my-custom-deployment (NodePort 80:30008)
 - **Image:** `marckdocker/csp-website:latest`
 - **Registry:** Docker Hub
 - **SHA:** `sha256:78a5a28741e3a9360b6b071eb98a45b9685abeb64e7c132b8e4cd9c35490ce2d`
+
+### DockerHub Repository - Image Pushed Successfully
+
+![DockerHub Repository](screenshots/dockerhub-repo.png)
 
 ---
 
