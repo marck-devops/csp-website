@@ -1,0 +1,25 @@
+name: Monthly Release
+
+on:
+  schedule:
+    - cron: '0 10 25 * *'   # Runs on the 25th of every month at 10 AM UTC
+  workflow_dispatch:        # Allows manual trigger too
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Merge develop into master
+        run: |
+          git config --global user.name "marck-devops"
+          git config --global user.email "marck.devops@gmail.com"
+          
+          git fetch origin
+          git checkout master
+          git merge origin/develop --no-ff -m "Monthly release"
+          
+          git push origin master
