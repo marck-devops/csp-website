@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: custom
-          image: docker6767/image
+          image: marckdocker/csp-website
           ports:
             - containerPort: 80
